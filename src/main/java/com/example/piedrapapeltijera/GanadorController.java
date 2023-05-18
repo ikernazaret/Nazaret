@@ -18,14 +18,14 @@ public class GanadorController {
     private Scene scene;
 
     @FXML
-    public void initialize() {
+    public void initialize() {  //Se encarga de llamar al método
         setResultado(JuegoController.ganadorString);
 
     }
 
     public void setResultado(String resultado) {
         resultadoLabel.setText(resultado);
-    }
+    } //Mostrara el mensaje de ganadorString de el otro controller
     @FXML
     public void IrJuegoView(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("JuegoView.fxml"));

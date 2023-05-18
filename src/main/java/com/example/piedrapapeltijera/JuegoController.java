@@ -13,33 +13,36 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class JuegoController {
-    private static final String[] OPCIONES = {"Piedra", "Papel", "Tijera"};
+
+
+    private static final String[] OPCIONES = {"Piedra", "Papel", "Tijera"};  //Crea una cadena con las opciones posibles
     private Stage stage;
     private Scene scene;
 
-    public static String ganadorString;  //si no static no podemos hacer la llamada desde fuera
+    public static String ganadorString;  //si no es static no podemos hacer la llamada desde fuera
 
 
     @FXML
     public void jugar(ActionEvent event) throws IOException {
-        int opcionJugador = obtenerOpcionJugador((Button) event.getSource());
-        int opcionComputadora = (int) (Math.random() * 3);
+        int opcionJugador = obtenerOpcionJugador((Button) event.getSource());   //Coger la información del botón pulsado
+        int opcionOrdenador = (int) (Math.random() * 3);      //Hacer que la maquina eliga un numero del 0 al 2
 
         String eleccionJugador = OPCIONES[opcionJugador];
-        String eleccionComputadora = OPCIONES[opcionComputadora];
-
+        String eleccionComputadora = OPCIONES[opcionOrdenador];
         String resultado;
-        if (opcionJugador == opcionComputadora) {
+
+
+        if (opcionJugador == opcionOrdenador) { //Si las dos opciones son iguales, el resultado será "Empate"
             resultado = "Empate";
             ganadorString = "Elegiste: " + eleccionJugador + "\nComputadora eligió: " + eleccionComputadora +
                     "\nResultado: " + resultado;
         } else {
-            if ((opcionJugador == 0 && opcionComputadora == 2) ||
-                    (opcionJugador == 1 && opcionComputadora == 0) ||
-                    (opcionJugador == 2 && opcionComputadora == 1)) {
+            if ((opcionJugador == 0 && opcionOrdenador == 2) ||   //Si ganamos, el resultado será ganaste
+                    (opcionJugador == 1 && opcionOrdenador == 0) ||
+                    (opcionJugador == 2 && opcionOrdenador == 1)) {
                 resultado = "¡Ganaste!";
             } else {
-                resultado = "Perdiste";
+                resultado = "Perdiste"; //Si no, sera Perdiste
             }
 
             ganadorString = "Elegiste: " + eleccionJugador + "\nComputadora eligió: " + eleccionComputadora +
@@ -47,11 +50,12 @@ public class JuegoController {
 
         }
 
-        toGanadorPortada(event);
+        toGanadorPortada(event);  //Cuando se calcule el resultado, llamara al metodo "toGanadorPortada" y  nos pasará a la siguiente pantalla
     }
 
     private int obtenerOpcionJugador(Button boton) {
-        // Obtener la opción seleccionada según el botón presionado
+        // Obtener la opción seleccionada según el botón seleccionado
+        //Si el botón pulsado coincide con el id, hara un return o otro
         if (boton.getId().equals("piedraBoton")) {
             return 0; // Piedra
 

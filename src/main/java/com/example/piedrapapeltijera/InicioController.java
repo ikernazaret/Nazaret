@@ -16,7 +16,7 @@ public class InicioController {
     private Scene scene;
 
 
-
+//Añade un método al botón para cuando se pulse, pase a la siguiente pantalla: "JuegoView.fxml"
     @FXML
     public void IrJuegoView(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("JuegoView.fxml"));

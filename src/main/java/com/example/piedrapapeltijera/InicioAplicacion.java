@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class InicioAplicacion extends Application {
 
-
+//Cuando se ejecute el java se muestra la pantalla de "InicioView.FXML"
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(InicioAplicacion.class.getResource("InicioView.fxml"));
