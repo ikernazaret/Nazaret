@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.piedrapapeltijera.JuegoController">
+   <children>
+      <Pane layoutX="71.0" layoutY="65.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="piedraBoton" layoutX="66.0" layoutY="253.0" mnemonicParsing="false" onAction="#jugar" text="Piedra" />
+            <Button fx:id="papelBoton" layoutX="246.0" layoutY="253.0" mnemonicParsing="false" onAction="#jugar" text="Papel" />
+            <Button fx:id="tijerasBoton" layoutX="416.0" layoutY="253.0" mnemonicParsing="false" onAction="#jugar" text="Tijera" />
+            <Label layoutX="234.0" layoutY="41.0" text="Elige una opción" />
+            <ImageView fitHeight="123.0" fitWidth="115.0" layoutX="68.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/piedra.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="115.0" fitWidth="115.0" layoutX="246.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/papel.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="115.0" fitWidth="115.0" layoutX="418.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/tijeras.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
