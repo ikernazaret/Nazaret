@@ -20,6 +20,7 @@ public class InicioAplicacion extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         stage.setTitle("Piedra, Papel o Tijeras");
         stage.setScene(scene);
+        stage.setResizable(false); //Para que no se pueda ampliar
         stage.show();
     }
 

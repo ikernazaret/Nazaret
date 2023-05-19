@@ -18,7 +18,7 @@ public class GanadorController {
     private Scene scene;
 
     @FXML
-    public void initialize() {  //Se encarga de llamar al método
+    public void initialize() {  //Se ncarga de llamar al método
         setResultado(JuegoController.ganadorString);
 
     }
@@ -32,6 +32,8 @@ public class GanadorController {
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        stage.setResizable(false); //Para que no se pueda ampliar
+
         stage.show();
     }
     @FXML
@@ -40,6 +42,8 @@ public class GanadorController {
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        stage.setResizable(false); //Para que no se pueda ampliar
+
         stage.show();
     }
 }
