@@ -7,8 +7,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class GanadorController {
@@ -17,14 +17,22 @@ public class GanadorController {
     private Stage stage;
     private Scene scene;
 
+
     @FXML
     public void initialize() {  //Se ncarga de llamar al método
         setResultado(JuegoController.ganadorString);
 
     }
 
+
+
+
+
+
     public void setResultado(String resultado) {
         resultadoLabel.setText(resultado);
+
+
     } //Mostrara el mensaje de ganadorString de el otro controller
     @FXML
     public void IrJuegoView(ActionEvent event) throws IOException {
